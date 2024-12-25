@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: custom-app
 spec:
   ports:
-  - name: nginx
+  - name: custom-app
     protocol: TCP
     port: 80
     targetPort: 80
   selector:
-    app: nginx
+    app: custom-app

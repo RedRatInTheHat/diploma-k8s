@@ -1,11 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx
+  name: custom-app
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx
+  ingressClassName: custom-app
   rules:
   - host: ingress.test.ru
     http:
@@ -14,6 +14,6 @@ spec:
         pathType: ImplementationSpecific
         backend: 
           service:
-            name: nginx
+            name: custom-app
             port:
               number: 80
