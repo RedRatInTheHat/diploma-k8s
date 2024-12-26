@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: custom-app
   rules:
-  - host: ingress.test.ru
+  - host: static.redrat.diploma
     http:
       paths:
       - path: /
